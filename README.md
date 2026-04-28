@@ -13,7 +13,7 @@ This repository contains a responsive enterprise landing page built with:
 
 ## Live Demo
 
-Add your deployed Vercel URL here once available.
+https://accredian-orcin.vercel.app
 
 ## Repository
 
