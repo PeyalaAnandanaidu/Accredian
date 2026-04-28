@@ -1,26 +1,101 @@
+/* 
+  TAILWIND v4 SYNTAX
+  ══════════════════
+  In v4, you use @import instead of @tailwind directives
+  Custom theme values go in @theme block (not tailwind.config.ts)
+  @apply restrictions: cannot use gradient utilities directly
+*/
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* 
+  @theme block = Tailwind v4's way to define custom design tokens
+  This REPLACES the extend section in tailwind.config.ts
+  These variables become available as Tailwind utility classes
+*/
+@theme {
+  /* 
+    Custom colors — these generate classes like:
+    bg-brand-blue, text-brand-blue, border-brand-blue
+  */
+  --color-brand-blue: #1a6fe4;
+  --color-brand-blue-dark: #0f4ea8;
+  --color-brand-blue-light: #e8f0fe;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* 
+    Custom font family — generates class: font-sans
+    Applied in layout.tsx body tag
+  */
+  --font-family-sans: "Inter", system-ui, sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* 
+    Custom animation for logo scroll
+    generates: animate-scroll-left
+  */
+  --animate-scroll-left: scrollLeft 20s linear infinite;
+
+  @keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* 
+  Global base styles
+  smooth scrolling for the entire page
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+/* 
+  IMPORTANT: In Tailwind v4, @apply with gradient utilities
+  (from-*, to-*, via-*) requires @reference OR must be
+  written as plain CSS.
+  
+  We AVOID @apply for complex utilities and use plain CSS instead.
+  This is the recommended v4 approach.
+*/
+
+/* Section padding - using plain CSS (safe in v4) */
+.section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+/* 
+  Gradient text - written in plain CSS (not @apply)
+  This works in v4 without @reference
+*/
+.gradient-text {
+  background: linear-gradient(to right, #1a6fe4, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card hover shadow transition */
+.card-shadow {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-shadow:hover {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
 }

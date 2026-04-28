@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Accredian Enterprise Clone
 
-## Getting Started
+A partial clone of the Accredian Enterprise landing page built with Next.js App Router and Tailwind CSS.
 
-First, run the development server:
+## Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This repository contains a responsive enterprise landing page built with:
+- Next.js 16 App Router
+- React 19 functional components + hooks
+- Tailwind CSS for styling
+- A lead capture modal form
+- A mock Next.js API route at `/api/leads`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Live Demo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Add your deployed Vercel URL here once available.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Repository
 
-## Learn More
+This repository contains the full source code for the Accredian Enterprise assignment.
 
-To learn more about Next.js, take a look at the following resources:
+## Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Fully responsive landing page design
+- Smooth section navigation and scroll tracking
+- Reusable component-based UI
+- Lead capture form integrated in the hero section
+- API integration using Next.js App Router API route
+- Navbar and footer rendered globally via root layout
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Setup Instructions
 
-## Deploy on Vercel
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
+3. Open [http://localhost:3000](http://localhost:3000)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Folder Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `app/` — Next.js App Router pages, layout, and API routes
+- `components/` — reusable UI components for landing page sections
+- `app/api/leads/route.ts` — mock lead capture endpoint
+- `app/layout.tsx` — site layout with Navbar and Footer
+- `app/page.tsx` — landing page composition
+
+## AI Usage
+
+AI tools were used for:
+- Reviewing and validating component structure
+- Improving README and documentation clarity
+- Confirming assignment coverage against project files
+
+## Manual Improvements
+
+Manual work included:
+- Connecting the lead form modal to the hero section
+- Implementing form validation and API submission
+- Building responsive layout sections and navigation
+- Refining footer, navbar, and section anchors
+
+
+
+## Notes
+
+This build is focused on clarity, responsiveness, and component reuse for the Accredian Enterprise landing page assignment.
