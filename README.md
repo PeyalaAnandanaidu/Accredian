@@ -11,13 +11,14 @@ This repository contains a responsive enterprise landing page built with:
 - A lead capture modal form
 - A mock Next.js API route at `/api/leads`
 
-## Live Demo
+## Project Links
 
-https://accredian-orcin.vercel.app
+- Live demo: https://accredian-orcin.vercel.app
+- GitHub repository: https://github.com/PeyalaAnandanaidu/Accredian.git
 
-## Repository
+## Project Status
 
-This repository contains the full source code for the Accredian Enterprise assignment.
+This build includes the landing page sections, responsive navigation, footer, lead capture form, and mock API integration. The current submission reflects a strong component-driven clone of the Accredian Enterprise landing experience.
 
 ## Key Features
 
@@ -51,20 +52,26 @@ This repository contains the full source code for the Accredian Enterprise assig
 ## AI Usage
 
 AI tools were used for:
-- Reviewing and validating component structure
-- Improving README and documentation clarity
-- Confirming assignment coverage against project files
+- Structuring the project and breaking the UI into reusable components
+- Debugging Tailwind and Next.js client/server issues
+- Improving README clarity and ensuring assignment coverage
 
 ## Manual Improvements
 
 Manual work included:
-- Connecting the lead form modal to the hero section
-- Implementing form validation and API submission
-- Building responsive layout sections and navigation
-- Refining footer, navbar, and section anchors
+- Organizing reusable components such as Navbar, Hero, Testimonials, CTA, and Footer
+- Refining UI spacing, responsiveness, and alignment
+- Fixing incorrect Tailwind usage and icon imports
+- Ensuring client-side interactivity with `use client` where required
 
+## Future Improvements
 
+With more time, I would:
+- Add polished animations and improve interactive UI elements
+- Optimize performance with lazy loading and image optimization
+- Implement backend persistence for lead submissions
+- Enhance accessibility and SEO further
 
 ## Notes
 
-This build is focused on clarity, responsiveness, and component reuse for the Accredian Enterprise landing page assignment.
+This build focuses on clarity, responsiveness, and maintainable component design for the Accredian Enterprise assignment.
